@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | NoteFlow</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- =========================
+            SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-note-sticky"></i>
+
+                <h2>NoteFlow</h2>
+
+            </div>
+
+            <nav>
+
+                <a href="dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+                <a href="profile.html" class="active">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>Profile</span>
+
+                </a>
+
+                <a href="about.html">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <span>About</span>
+
+                </a>
+
+            </nav>
+
+        </div>
+
+        <button id="logoutBtn" class="logout-btn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </button>
+
+    </aside>
+
+
+
+    <!-- =========================
+            MAIN CONTENT
+    ========================== -->
+
+    <main class="main-content">
+
+        <!-- =========================
+                TOP HEADER
+        ========================== -->
+
+        <header class="dashboard-header">
+
+            <div class="header-left">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Search profile..."
+                    >
+
+                </div>
+
+            </div>
+
+            <div class="header-right">
+
+                <button class="notification-btn">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                </button>
+
+                <div class="welcome-box">
+
+                    <h3>
+
+                        Welcome,
+
+                        <span id="welcomeName">
+
+                            User
+
+                        </span>
+
+                        👋
+
+                    </h3>
+
+                    <p id="currentDate">
+
+                        Monday, August 3
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+                PAGE TITLE
+        ========================== -->
+
+        <section class="profile-header">
+
+            <h1>
+
+                My Profile
+
+            </h1>
+
+            <p>
+
+                Manage your personal information and account settings.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+            PERSONAL INFORMATION
+        ========================== -->
+
+        <section class="profile-card">
+
+            <div class="section-title">
+
+                <h2>
+
+                    Personal Information
+
+                </h2>
+
+                <p>
+
+                    Update your personal details below.
+
+                </p>
+
+            </div>
+
+            <form id="profileForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Full Name
+
+                        </label>
+
+                        <input
+                            id="name"
+                            type="text"
+                            placeholder="Enter your full name"
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Email Address
+
+                        </label>
+
+                        <input
+                            id="email"
+                            type="email"
+                            readonly
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Date of Birth
+
+                        </label>
+
+                        <input
+                            id="dob"
+                            type="date"
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+
+                            Gender
+
+                        </label>
+
+                        <select id="gender">
+
+                            <option value="">
+
+                                Select Gender
+
+                            </option>
+
+                            <option>
+
+                                Female
+
+                            </option>
+
+                            <option>
+
+                                Male
+
+                            </option>
+
+                            <option>
+
+                                Other
+
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group full-width">
+
+                        <label>
+
+                            Hobbies
+
+                        </label>
+
+                        <input
+                            id="hobbies"
+                            type="text"
+                            placeholder="Reading, Coding, Photography..."
+                        >
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="primary-btn"
+                    type="submit">
+
+                    <i class="fa-solid fa-floppy-disk"></i>
+
+                    Save Changes
+
+                </button>
+
+            </form>
+
+        </section>
+
+                <!-- =========================
+                ACCOUNT OVERVIEW
+        ========================== -->
+
+        <section class="stats-section">
+
+            <div class="stat-card purple">
+
+                <div class="stat-icon">
+
+                    <i class="fa-solid fa-note-sticky"></i>
+
+                </div>
+
+                <div class="stat-info">
+
+                    <h2 id="totalNotes">
+
+                        0
+
+                    </h2>
+
+                    <p>Total Notes</p>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card blue">
+
+                <div class="stat-icon">
+
+                    <i class="fa-solid fa-thumbtack"></i>
+
+                </div>
+
+                <div class="stat-info">
+
+                    <h2 id="pinnedNotes">
+
+                        0
+
+                    </h2>
+
+                    <p>Pinned Notes</p>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card green">
+
+                <div class="stat-icon">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+                <div class="stat-info">
+
+                    <h2 id="memberSince">
+
+                        2026
+
+                    </h2>
+
+                    <p>Member Since</p>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card orange">
+
+                <div class="stat-icon">
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                </div>
+
+                <div class="stat-info">
+
+                    <h2 id="lastUpdated">
+
+                        Today
+
+                    </h2>
+
+                    <p>Last Updated</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+                ACCOUNT DETAILS
+        ========================== -->
+
+        <section class="account-grid">
+
+            <!-- Activity -->
+
+            <div class="account-card">
+
+                <div class="account-title">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <h2>
+
+                        Account Activity
+
+                    </h2>
+
+                </div>
+
+                <div class="info-list">
+
+                    <div class="info-item">
+
+                        <span>Total Notes</span>
+
+                        <strong id="activityTotalNotes">
+
+                            0
+
+                        </strong>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <span>Pinned Notes</span>
+
+                        <strong id="activityPinnedNotes">
+
+                            0
+
+                        </strong>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <span>Member Since</span>
+
+                        <strong id="activityMemberSince">
+
+                            2026
+
+                        </strong>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <span>Last Updated</span>
+
+                        <strong id="activityLastUpdated">
+
+                            Today
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Preferences -->
+
+            <div class="account-card">
+
+                <div class="account-title">
+
+                    <i class="fa-solid fa-sliders"></i>
+
+                    <h2>
+
+                        Preferences
+
+                    </h2>
+
+                </div>
+
+                <div class="info-list">
+
+                    <div class="info-item">
+
+                        <span>Theme</span>
+
+                        <strong>
+
+                            Light
+
+                        </strong>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <span>Notifications</span>
+
+                        <strong>
+
+                            Enabled
+
+                        </strong>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <span>Language</span>
+
+                        <strong>
+
+                            English
+
+                        </strong>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <span>Account Status</span>
+
+                        <strong class="active">
+
+                            Active
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <div id="toast" class="toast"></div>
+
+    </main>
+
+</div>
+
+
+
+<script src="js/ui.js"></script>
+
+<script src="js/profile.js"></script>
+
+</body>
+
+</html>

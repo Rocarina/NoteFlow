@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | NoteFlow</title>
+
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        rel="stylesheet">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- ==========================================
+                    SIDEBAR
+    ========================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-note-sticky"></i>
+
+                <h2>NoteFlow</h2>
+
+            </div>
+
+            <nav>
+
+                <a href="dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+                <a href="profile.html">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>Profile</span>
+
+                </a>
+
+                <a href="about.html" class="active">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <span>About</span>
+
+                </a>
+
+            </nav>
+
+        </div>
+
+        <button id="logoutBtn" class="logout-btn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </button>
+
+    </aside>
+
+
+
+    <!-- ==========================================
+                    MAIN CONTENT
+    ========================================== -->
+
+    <main class="main-content">
+
+        <!-- PAGE TITLE -->
+
+        <section class="about-header">
+
+            <h1>
+
+                About NoteFlow
+
+            </h1>
+
+            <p>
+
+                A modern full-stack note management application designed for productivity.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- HERO CARD -->
+
+        <section class="hero-card">
+
+            <div class="hero-content">
+
+                <h2>
+
+                    Organize Smarter.
+
+                    Work Faster.
+
+                </h2>
+
+                <p>
+
+                    NoteFlow helps students, professionals and developers organize their notes, manage ideas, categorize tasks and stay productive with a clean, modern workspace.
+
+                </p>
+
+            </div>
+
+        </section>
+
+                <!-- ==========================================
+                    FEATURES
+        ========================================== -->
+
+        <section class="features-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon purple">
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                </div>
+
+                <h3>Fast & Responsive</h3>
+
+                <p>
+
+                    Access your notes instantly with a smooth and responsive interface built for speed.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon green">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <h3>Secure Login</h3>
+
+                <p>
+
+                    User authentication is protected using JWT, keeping your personal notes safe.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon blue">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                </div>
+
+                <h3>Organized Notes</h3>
+
+                <p>
+
+                    Categorize, search and manage your notes efficiently in one place.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+                    OUR MISSION
+        ========================================== -->
+
+        <section class="mission-card">
+
+            <div class="section-heading">
+
+                <h2>
+
+                    Our Mission
+
+                </h2>
+
+                <p>
+
+                    Making note management simple and enjoyable.
+
+                </p>
+
+            </div>
+
+            <p class="mission-text">
+
+                Our mission is to provide students, professionals and developers with a modern workspace where ideas can be captured, organized and accessed anytime. We believe productivity starts with simplicity, which is why NoteFlow focuses on a clean interface, secure authentication and an effortless note-taking experience.
+
+            </p>
+
+        </section>
+
+                <!-- ==========================================
+                TECHNOLOGY STACK
+        ========================================== -->
+
+        <section class="tech-card">
+
+            <div class="section-heading">
+
+                <h2>
+
+                    Technology Stack
+
+                </h2>
+
+                <p>
+
+                    Built using modern web technologies.
+
+                </p>
+
+            </div>
+
+            <div class="tech-grid">
+
+                <span>HTML5</span>
+
+                <span>CSS3</span>
+
+                <span>JavaScript</span>
+
+                <span>Node.js</span>
+
+                <span>Express.js</span>
+
+                <span>MongoDB</span>
+
+                <span>JWT</span>
+
+                <span>REST API</span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+                DEVELOPER
+        ========================================== -->
+
+        <section class="developer-card">
+
+            <div class="developer-icon">
+
+                <i class="fa-solid fa-code"></i>
+
+            </div>
+
+            <h2>
+
+                Developed By
+
+            </h2>
+
+            <h3>
+
+                Tanvi Verlecar
+
+            </h3>
+
+            <p>
+
+                Full Stack Internship Project • 2026
+
+            </p>
+
+            <p>
+
+                Built with modern web technologies to demonstrate full-stack development, authentication and responsive UI design.
+
+            </p>
+
+        </section>
+
+    </main>
+
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="js/ui.js"></script>
+
+<script src="js/about.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+/* Toast Notification */
+
+.toast{
+
+    position: fixed;
+
+    top: 30px;
+
+    right: 30px;
+
+    background: #10b981;
+
+    color: white;
+
+    padding: 16px 26px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.25);
+
+    font-weight: 500;
+
+    transform: translateX(400px);
+
+    transition: .4s;
+
+    z-index: 9999;
+
+}
+
+.toast.show{
+
+    transform: translateX(0);
+
+}
+
+.toast.error{
+
+    background: #ef4444;
+
+}
+
+.toast.warning{
+
+    background: #f59e0b;
+
+}
+
+/*==================================================
+                FADE UP
+==================================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*==================================================
+                PAGE ANIMATIONS
+==================================================*/
+
+.page-header{
+
+    animation:fadeUp .5s ease;
+
+}
+
+.profile-card{
+
+    animation:fadeUp .7s ease;
+
+}
+
+.stats-section{
+
+    animation:fadeUp .9s ease;
+
+}
+
+.quick-actions{
+
+    animation:fadeUp 1.1s ease;
+
+}
+
+
+/*==================================================
+                CARD HOVER
+==================================================*/
+
+.profile-card,
+
+.stat-card,
+
+.action-card{
+
+    transition:.3s;
+
+}
+
+.profile-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.10);
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.action-card:hover{
+
+    transform:translateY(-8px);
+
+}

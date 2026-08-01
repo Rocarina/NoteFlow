@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | NoteFlow</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Dashboard CSS -->
+
+    <link rel="stylesheet"
+          href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+</head>
+
+<body>
+
+<!-- ==========================================
+                DASHBOARD LAYOUT
+=========================================== -->
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-note-sticky"></i>
+
+            <h2>NoteFlow</h2>
+
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html" class="active">
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+            </a>
+
+            <a href="#notesSection">
+
+                <i class="fa-solid fa-book"></i>
+
+                My Notes
+
+            </a>
+
+            <a href="profile.html">
+
+                <i class="fa-solid fa-user"></i>
+
+                Profile
+
+            </a>
+
+            <a href="about.html">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                About
+
+            </a>
+
+        </nav>
+
+        <button id="logoutBtn" class="logout-btn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </button>
+
+    </aside>
+
+
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- ==========================================
+                TOP HEADER
+========================================== -->
+
+<header class="dashboard-header">
+
+    <div class="header-left">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search notes..."
+            >
+
+        </div>
+
+    </div>
+
+
+    <div class="header-right">
+
+        <button class="notification-btn">
+
+            <i class="fa-regular fa-bell"></i>
+
+        </button>
+
+
+        <div class="welcome-box">
+
+            <h3>
+
+                Welcome,
+
+                <span id="welcomeName">
+
+                    User
+
+                </span>
+
+                👋
+
+            </h3>
+
+            <p id="currentDate">
+
+                Monday, August 3
+
+            </p>
+
+        </div>
+
+
+        <button
+            id="newNoteBtn"
+            class="primary-btn">
+
+            <i class="fa-solid fa-plus"></i>
+
+            New Note
+
+        </button>
+
+    </div>
+
+</header>
+
+<!-- ==========================================
+                DASHBOARD STATS
+========================================== -->
+
+<section class="stats-section">
+
+    <div class="stat-card purple">
+
+        <div class="stat-icon">
+
+            <i class="fa-solid fa-note-sticky"></i>
+
+        </div>
+
+        <div class="stat-info">
+
+            <h2 id="totalNotes">
+
+                0
+
+            </h2>
+
+            <p>Total Notes</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="stat-card blue">
+
+        <div class="stat-icon">
+
+            <i class="fa-solid fa-thumbtack"></i>
+
+        </div>
+
+        <div class="stat-info">
+
+            <h2 id="pinnedNotes">
+
+                0
+
+            </h2>
+
+            <p>Pinned Notes</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="stat-card green">
+
+        <div class="stat-icon">
+
+            <i class="fa-solid fa-layer-group"></i>
+
+        </div>
+
+        <div class="stat-info">
+
+            <h2 id="categoryCount">
+
+                0
+
+            </h2>
+
+            <p>Categories</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="stat-card orange">
+
+        <div class="stat-icon">
+
+            <i class="fa-solid fa-clock-rotate-left"></i>
+
+        </div>
+
+        <div class="stat-info">
+
+            <h2 id="recentNotes">
+
+                0
+
+            </h2>
+
+            <p>Recent Notes</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+                NOTES SECTION
+========================================== -->
+
+<section id="notesSection" class="notes-section">
+
+    <div class="notes-header">
+
+        <div>
+
+            <h2>My Notes</h2>
+
+            <p>Manage and organize your ideas.</p>
+
+        </div>
+
+        <div class="notes-actions">
+
+            <select id="sortNotes">
+
+                <option value="newest">Newest First</option>
+
+                <option value="oldest">Oldest First</option>
+
+                <option value="title">A - Z</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <!-- Categories -->
+
+    <div class="categories">
+
+        <button
+            class="category-chip active"
+            data-category="All">
+
+            All
+
+        </button>
+
+        <button
+            class="category-chip"
+            data-category="Work">
+
+            Work
+
+        </button>
+
+        <button
+            class="category-chip"
+            data-category="Study">
+
+            Study
+
+        </button>
+
+        <button
+            class="category-chip"
+            data-category="Personal">
+
+            Personal
+
+        </button>
+
+        <button
+            class="category-chip"
+            data-category="Ideas">
+
+            Ideas
+
+        </button>
+
+    </div>
+
+
+    <!-- Notes Grid -->
+
+    <div
+        id="notesContainer"
+        class="notes-grid">
+
+    </div>
+
+
+    <!-- Empty State -->
+
+    <div
+        id="emptyState"
+        class="empty-state">
+
+        <i class="fa-regular fa-note-sticky"></i>
+
+        <h2>No Notes Yet</h2>
+
+        <p>
+
+            Start creating beautiful notes to stay organized.
+
+        </p>
+
+        <button
+            id="emptyAddBtn"
+            class="primary-btn">
+
+            <i class="fa-solid fa-plus"></i>
+
+            Create First Note
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+            FLOATING ACTION BUTTON
+========================================== -->
+
+<button id="floatingAddBtn" class="floating-btn">
+
+    <i class="fa-solid fa-plus"></i>
+
+</button>
+
+
+
+<!-- ==========================================
+                NOTE MODAL
+========================================== -->
+
+<div id="noteModal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2 id="modalTitle">
+
+                Add New Note
+
+            </h2>
+
+            <button id="closeModal">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+        <form id="noteForm">
+
+            <div class="form-group">
+
+                <label>Title</label>
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Enter note title"
+                    required
+                >
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Category</label>
+
+                <select id="category">
+
+                    <option value="Work">Work</option>
+
+                    <option value="Study">Study</option>
+
+                    <option value="Personal">Personal</option>
+
+                    <option value="Ideas">Ideas</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Color</label>
+
+                <input
+                    type="color"
+                    id="color"
+                    value="#6C63FF"
+                >
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Description</label>
+
+                <textarea
+                    id="content"
+                    rows="6"
+                    placeholder="Write your note here..."
+                    required
+                ></textarea>
+
+            </div>
+
+            <button
+                type="submit"
+                class="primary-btn save-btn">
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Save Note
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==========================================
+            DELETE CONFIRMATION
+========================================== -->
+
+<div id="deleteModal" class="modal">
+
+    <div class="delete-box">
+
+        <i class="fa-solid fa-trash"></i>
+
+        <h2>Delete Note?</h2>
+
+        <p>
+
+            This action cannot be undone.
+
+        </p>
+
+        <div class="delete-actions">
+
+            <button
+                id="cancelDelete"
+                class="secondary-btn">
+
+                Cancel
+
+            </button>
+
+            <button
+                id="confirmDelete"
+                class="danger-btn">
+
+                Delete
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==========================================
+            TOAST MESSAGE
+========================================== -->
+
+<div
+    id="toast"
+    class="toast">
+
+</div>
+
+
+
+</main>
+
+</div>
+
+
+
+<!-- ==========================================
+                JAVASCRIPT
+========================================== -->
+
+<script src="js/ui.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
