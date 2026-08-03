@@ -151,19 +151,6 @@ Open the `frontend` folder and launch `index.html` using Live Server or any loca
 
 ---
 
-# 📷 Screenshots
-
-You can add screenshots of:
-
-- Home Page
-- Login Page
-- Register Page
-- Dashboard
-- Profile
-- About Page
-
----
-
 # 🔮 Future Enhancements
 
 - 🌙 Dark Mode
@@ -197,13 +184,3 @@ This project demonstrates:
 **Tanvi Verlecar**
 
 Full Stack Internship Project – 2026
-
----
-
-# 📄 License
-
-This project is developed for educational and internship purposes.
-
----
-
-## ⭐ If you like this project, don't forget to star the repository!
